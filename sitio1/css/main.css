@@ -25,3 +25,10 @@ body {
 .carousel-inner {
     max-height:39rem !important;
 }
+
+/*===================MEDIA QUERIES PANTALLA SM ==========================*/
+@media (max-width:768px) {
+    #intro {
+        width: 90%  !important;
+    }
+}
