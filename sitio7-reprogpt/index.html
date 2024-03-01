@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Radio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="audio-player">
+        <audio id="audio" src="https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ" preload="auto"></audio>
+        <button id="playPauseBtn">Play</button>
+        <button id="muteBtn">Mute</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+        <span id="currentTime">0:00</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Radio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="audio-player">
+        <audio id="audio" src="https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ" preload="auto"></audio>
+        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        <button id="muteBtn"><i class="fas fa-volume-up"></i></button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+        <span id="currentTime">0:00</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
