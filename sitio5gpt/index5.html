@@ -9,12 +9,49 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Agrega tu propio CSS personalizado si es necesario -->
   <link href="styles.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
     body {
       background-color: #333;
       /* Color oscuro de fondo */
+      margin: 0;
+      padding: 0;
     }
+
+
+    .audio-player {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .audio-player img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .audio-player .volumeControl {
+      margin-left: auto;
+    }
+
+    .audio-player .volumeControl button {
+      margin: 0 5px;
+      padding: 3px;
+    }
+
+    
+
+    
   </style>
+
 </head>
 
 <body>
@@ -300,7 +337,7 @@
   <div class="container mt-4">
 
     <h3 class="text-light">Radios Mas Escuchadas</h3>
-    
+
 
   </div>
 
@@ -311,10 +348,65 @@
     </div>
   </footer>
 
+
+  <!-- reproductor de audio -->
+  <div class="audio-player">
+
+    <img src="img/logo-radio-6.jpg" alt="Logo de la radio">
+
+    <audio id="audio"
+      src="https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ"></audio>
+    <button id="playPauseBtn">Play</button>
+    <button id="muteBtn">Mute</button>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+    <span id="currentTime">0:00</span>
+
+  </div>
+
   <!-- Scripts de Bootstrap y JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <!-- Agrega tus propios scripts personalizados si es necesario -->
   <script src="scripts.js"></script>
+
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const muteBtn = document.getElementById('muteBtn');
+    const volumeControl = document.getElementById('volumeControl');
+    const currentTime = document.getElementById('currentTime');
+
+    let isPlaying = false;
+
+    playPauseBtn.addEventListener('click', function () {
+      if (isPlaying) {
+        audio.pause();
+        playPauseBtn.textContent = 'Play';
+      } else {
+        audio.play();
+        playPauseBtn.textContent = 'Pause';
+      }
+      isPlaying = !isPlaying;
+    });
+
+    muteBtn.addEventListener('click', function () {
+      audio.muted = !audio.muted;
+      muteBtn.textContent = audio.muted ? 'Unmute' : 'Mute';
+    });
+
+    volumeControl.addEventListener('input', function () {
+      audio.volume = volumeControl.value;
+    });
+
+    audio.addEventListener('timeupdate', function () {
+      const minutes = Math.floor(audio.currentTime / 60);
+      const seconds = Math.floor(audio.currentTime % 60);
+      currentTime.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    });
+  </script>
 </body>
 
 </html>
