@@ -123,36 +123,45 @@
     <p>Este es un sitio web básico creado con Bootstrap 5. Puedes personalizarlo y expandirlo según tus necesidades.</p>
   </div>
 
+  <div class="container">
+    <h1 class="text-center mt-5">Ejemplo de Puntos de Quiebre Personalizados de Bootstrap 5</h1>
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">
+          <div class="card-body text-center"> <!-- Añade la clase text-center aquí -->
+            <h5 class="card-title">Radio Juvenil</h5>
+            <p class="card-text">Nicaragua</p>
+            <p class="d-lg-none fs-5">99.1 FM</p> <!-- Agregar esta línea -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+          <div class="card-body text-center"> <!-- Añade la clase text-center aquí -->
+            <h5 class="card-title">Elemento 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="d-lg-none fs-5">Texto más grande en XS</p> <!-- Agregar esta línea -->
+          </div>
+        </div>
+      </div>
+      <!-- Repite los elementos según sea necesario para cumplir con tus requisitos -->
+    </div>
+  </div>
+
   <!-- Cards con imágenes, descripción y botón -->
   <div class="container mt-4">
     <h3 class="text-light">Radios Populares</h3>
-    <div class="row row-cols-1 row-cols-md-4 row-cols-lg-6">
-
-      <div class="mb-3 ">
-        <div class="card">
-          <img class="card-img-top" src="img/logo-radio-8.jpg" alt="">
-          
-          <div class="card-body text-center mb-0 text-center">
-            <h6 class="h5 card-title fs-3 fs-md-4 fs-lg-5">Radio La Musical</h6>
-            <h4 class="h6 card-subtitle badge text-muted mb-0 position-absolute bottom-0 end-0">99.3 FM</h4>            
-            <a href="" class="card-link fs-3 fs-md-4 fs-lg-5">El Salvador</a>
-
-          </div>
-          
-        </div>
-      </div>
-
-
+    <div class="row">
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
         <div class="card">
           <img src="img/logo-radio-3.jpg" class="card-img-top" alt="...">
-          <div class="card-img-overlay">
-            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">88.3 FM</p>
-          </div>
           <div class="card-body text-center">
             <h6 class="card-title fs-3 fs-md-4 fs-lg-5">Radio Tropicalidad</h6>
             <p class="card-text">Perú</p>
+            <p class="card-text">102.9 FM</p>
           </div>
         </div>
       </div>
@@ -380,12 +389,6 @@
     </div>
   </div>
 
-  <div class="container mt-4">
-
-    <h3 class="text-light">Radios Mas Escuchadas</h3>
-
-   
-  </div>
 
   <!-- Pie de página -->
   <footer class="bg-dark text-light text-center py-4 mb-4">
