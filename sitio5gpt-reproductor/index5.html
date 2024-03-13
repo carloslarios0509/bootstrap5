@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Título de tu Sitio Web</title>
+  <!-- Enlaces a los archivos CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Agrega tu propio CSS personalizado si es necesario -->
+  <link href="styles.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #333;
+      /* Color oscuro de fondo */
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .audio-player {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .audio-player img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .audio-player .volumeControl {
+      margin-left: auto;
+    }
+
+    .audio-player .volumeControl button {
+      margin: 0 5px;
+      padding: 3px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+
+        <img src="img/rv-logo.png" alt="">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+          <!-- Campo de búsqueda centrado -->
+          <form class="d-flex justify-content-center">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Carrusel con efecto de slide -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/rv-slider1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/rv-slider2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/rv-slider3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/rv-slider1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/rv-slider2.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="container mt-4 text-light">
+    <h1>Bienvenido a RaVir</h1>
+    <p>Este es un sitio web básico creado con Bootstrap 5. Puedes personalizarlo y expandirlo según tus necesidades.</p>
+  </div>
+
+  <div class="container mt-3">    
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/futura.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/labuenisima.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/futura.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/labuenisima.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/futura.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/labuenisima.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/futura.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/labuenisima.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/futura.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="...">          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 col-4 mb-3">
+        <div class="card">
+          <img src="img/labuenisima.webp" class="card-img-top" alt="...">          
+        </div>
+      </div>
+      <!-- Repite los elementos según sea necesario para cumplir con tus requisitos -->
+    </div>
+  </div>
+
+  <!-- Cards con imágenes, descripción y botón -->
+  <div class="container mt-4">
+    <h3 class="text-light">Radios Populares</h3>
+    <div class="row">
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-3.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-4.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">107.9 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title fs-3 fs-md-4 fs-lg-5">Radio La Hermosa</h6>
+            <p class="card-text">Guatemala</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-5.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">100.3 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title fs-3 fs-md-4 fs-lg-5">Radio Super 100</h6>
+            <p class="card-text">Argentina</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card shadow">
+          <img src="img/logo-radio-6.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">98.8 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio La Tropicana</h6>
+            <p class="card-text">Honduras</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-7.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">97.3 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Sensacion Romantica</h6>
+            <p class="card-text">Mexico</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-8.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">96.9 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Sonora</h6>
+            <p class="card-text">Guatemala</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">90.9 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Exitos</h6>
+            <p class="card-text">Nicaragua</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-2.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">89.3 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Estrella X</h6>
+            <p class="card-text">Venezuela</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card shadow">
+          <img src="img/logo-radio-3.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">100.1 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Ranchera</h6>
+            <p class="card-text">Nicaragua</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-3.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">97.3 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Studio X</h6>
+            <p class="card-text">Nicaragua</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-2.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">97.3 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Studio X</h6>
+            <p class="card-text">Nicaragua</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">97.3 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Studio X</h6>
+            <p class="card-text">Nicaragua</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-4.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">103.3 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Progreso</h6>
+            <p class="card-text">Nicaragua</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card shadow">
+          <img src="img/logo-radio-2.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">88.7 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Globo</h6>
+            <p class="card-text">Honduras</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-5.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">94.7 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio América</h6>
+            <p class="card-text">Nicaragua</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-6.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">101.9 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio La Voz de Atitlan</h6>
+            <p class="card-text">Nicaragua</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-7.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">97.3 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Fantasma</h6>
+            <p class="card-text">Honduras</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mb-3">
+        <div class="card">
+          <img src="img/logo-radio-8.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <p class="h5 card-title badge bg-dark position-absolute bottom-0 end-0">100.5 FM</p>
+          </div>
+          <div class="card-body text-center">
+            <h6 class="card-title">Radio Cultural</h6>
+            <p class="card-text">Mexico</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-light text-center py-4 mb-4">
+    <div class="container">
+      <p>Derechos de Autor &copy; 2024 - Tu Nombre</p>
+    </div>
+  </footer>
+
+
+  <!-- reproductor de audio -->
+  <div class="audio-player bg-dark">
+
+    <img src="img/logo-radio-6.jpg" alt="Logo de la radio">
+
+    <audio id="audio"
+      src="https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ"></audio>
+    <button id="playPauseBtn">Play</button>
+    <button id="muteBtn">Mute</button>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+    <span id="currentTime">0:00</span>
+
+  </div>
+
+  <!-- Scripts de Bootstrap y JavaScript -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- Agrega tus propios scripts personalizados si es necesario -->
+  <script src="scripts.js"></script>
+
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const muteBtn = document.getElementById('muteBtn');
+    const volumeControl = document.getElementById('volumeControl');
+    const currentTime = document.getElementById('currentTime');
+
+    let isPlaying = false;
+
+    playPauseBtn.addEventListener('click', function () {
+      if (isPlaying) {
+        audio.pause();
+        playPauseBtn.textContent = 'Play';
+      } else {
+        audio.play();
+        playPauseBtn.textContent = 'Pause';
+      }
+      isPlaying = !isPlaying;
+    });
+
+    muteBtn.addEventListener('click', function () {
+      audio.muted = !audio.muted;
+      muteBtn.textContent = audio.muted ? 'Unmute' : 'Mute';
+    });
+
+    volumeControl.addEventListener('input', function () {
+      audio.volume = volumeControl.value;
+    });
+
+    audio.addEventListener('timeupdate', function () {
+      const minutes = Math.floor(audio.currentTime / 60);
+      const seconds = Math.floor(audio.currentTime % 60);
+      currentTime.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    });
+  </script>
+</body>
+
+</html>
