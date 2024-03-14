@@ -12,8 +12,11 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <style>
-    body {
+
+
+    <style>
+
+body {
       background-color: #333;
       /* Color oscuro de fondo */
       margin: 0;
@@ -21,32 +24,25 @@
     }
 
 
-    .audio-player {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: #f1f1f1;
-      padding: 10px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-    }
+      /* Estilos personalizados para el reproductor de audio */
+      #audioPlayerContainer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+      }
 
-    .audio-player img {
+      .audio-player img {
       width: 40px;
       margin-right: 10px;
     }
 
-    .audio-player .volumeControl {
-      margin-left: auto;
-    }
-
-    .audio-player .volumeControl button {
-      margin: 0 5px;
-      padding: 3px;
-    }
-  </style>
+    </style>
 
 </head>
 
@@ -123,215 +119,236 @@
     <p>Este es un sitio web básico creado con Bootstrap 5. Puedes personalizarlo y expandirlo según tus necesidades.</p>
   </div>
 
-  <div class="container mt-3">    
+    <!-- Imágenes -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="../sitio-web-radio-1/img/150-years-logo-design.webp" class="img-fluid" alt="Imagen 1" onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
+        </div>
+        <div class="col-md-4">
+          <img src="../sitio-web-radio-1/img/futura.webp" class="img-fluid" alt="Imagen 2" onclick="playAudio('https://stm2.xcast.com.br:7546/;', this)">
+        </div>
+        <div class="col-md-4">
+          <img src="../sitio-web-radio-1/img/labuenisima.webp" class="img-fluid" alt="Imagen 3" onclick="playAudio('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this)">
+        </div>
+      </div>
+    </div>
+
+  <div class="container mt-3">
     <div class="row justify-content-between">
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <img src="img/futura.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
+          <img src="img/labuenisima.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <img src="img/futura.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
+          <img src="img/labuenisima.webp" class="card-img-top" alt="...">
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <img src="img/futura.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
+          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-        <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <a href=""><img src="img/futura.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-        <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
+          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="..."> </a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <a href=""><img src="img/futura.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-        <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
+          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="..."> </a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <a href=""><img src="img/futura.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-        <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
+          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="..."> </a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <a href=""><img src="img/futura.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-        <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
+          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="..."> </a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <a href=""><img src="img/futura.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-        <div class="card">
-          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="...">   </a>                 
+          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/futura.webp" class="card-img-top" alt="...">   </a>              
+          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="..."> </a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <a href=""><img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>         
+          <a href=""><img src="img/futura.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
         <div class="card">
-          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="...">          </a>          
+          <a href=""><img src="img/logo-radio-1.jpg" class="card-img-top" alt="..."></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <a href=""><img src="img/labuenisima.webp" class="card-img-top" alt="..."> </a>
         </div>
       </div>
       <!-- Repite los elementos según sea necesario para cumplir con tus requisitos -->
@@ -580,20 +597,50 @@
     </div>
   </footer>
 
-
-  <!-- reproductor de audio -->
-  <div class="audio-player bg-dark">
-
-    <img src="img/logo-radio-6.jpg" alt="Logo de la radio">
-
-    <audio id="audio"
-      src="https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ"></audio>
-    <button id="playPauseBtn">Play</button>
-    <button id="muteBtn">Mute</button>
-    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
-    <span id="currentTime">0:00</span>
-
+  <!-- Reproductor de audio -->
+  <div id="audioPlayerContainer">
+    <audio id="audioPlayer">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <button onclick="togglePlayPause()">Play/Pausa</button>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" oninput="setVolume(this.value)">
   </div>
+
+  <script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    var playPauseButton = document.querySelector('#audioPlayerContainer button');
+    var volumeControl = document.getElementById('volumeControl');
+
+    function playAudio(audioSrc, clickedImage) {
+      audioPlayer.src = audioSrc;
+      audioPlayer.play();
+      showImageInPlayer(clickedImage);
+    }
+
+    function togglePlayPause() {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseButton.textContent = 'Pausa';
+      } else {
+        audioPlayer.pause();
+        playPauseButton.textContent = 'Play';
+      }
+    }
+
+    function setVolume(volume) {
+      audioPlayer.volume = volume;
+    }
+
+    function showImageInPlayer(image) {
+      var player = document.getElementById('audioPlayerContainer');
+      player.style.backgroundImage = 'url(' + image.src + ')';
+      player.style.backgroundSize = 'cover';
+    }
+  </script>
+
+
+
+
 
   <!-- Scripts de Bootstrap y JavaScript -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
@@ -603,42 +650,6 @@
   <!-- Agrega tus propios scripts personalizados si es necesario -->
   <script src="scripts.js"></script>
 
-
-  <script>
-    const audio = document.getElementById('audio');
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    const muteBtn = document.getElementById('muteBtn');
-    const volumeControl = document.getElementById('volumeControl');
-    const currentTime = document.getElementById('currentTime');
-
-    let isPlaying = false;
-
-    playPauseBtn.addEventListener('click', function () {
-      if (isPlaying) {
-        audio.pause();
-        playPauseBtn.textContent = 'Play';
-      } else {
-        audio.play();
-        playPauseBtn.textContent = 'Pause';
-      }
-      isPlaying = !isPlaying;
-    });
-
-    muteBtn.addEventListener('click', function () {
-      audio.muted = !audio.muted;
-      muteBtn.textContent = audio.muted ? 'Unmute' : 'Mute';
-    });
-
-    volumeControl.addEventListener('input', function () {
-      audio.volume = volumeControl.value;
-    });
-
-    audio.addEventListener('timeupdate', function () {
-      const minutes = Math.floor(audio.currentTime / 60);
-      const seconds = Math.floor(audio.currentTime % 60);
-      currentTime.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    });
-  </script>
 </body>
 
 </html>
