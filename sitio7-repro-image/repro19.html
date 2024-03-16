@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor de Audio Personalizado con Bootstrap</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .sound-bar {
+      width: 100%;
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .sound-bar div {
+      width: 0;
+      height: 100%;
+      background-color: #007bff;
+      animation: soundAnimation 1s linear infinite;
+    }
+    @keyframes soundAnimation {
+      0% { width: 0; }
+      50% { width: 50%; }
+      100% { width: 0; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <!-- Imágenes -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="../sitio-web-radio-1/img/104fm.jpg" class="img-fluid" alt="Imagen 1" onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Audio 1')">
+      </div>
+      <div class="col-md-4">
+        <img src="../sitio-web-radio-1/img/104fm.jpg" class="img-fluid" alt="Imagen 2" onclick="showPlayer('audio2.mp3', this.src, 'Audio 2')">
+      </div>
+      <div class="col-md-4">
+        <img src="../sitio-web-radio-1/img/104fm.jpg" class="img-fluid" alt="Imagen 3" onclick="showPlayer('audio/Alex Wayne - Te Amo.mp3', this.src, 'Audio 3')">
+      </div>
+    </div>
+  </div>
+
+  <!-- Reproductor de audio personalizado -->
+  <div id="audioPlayerContainer" class="position-fixed bottom-0 start-50 translate-middle-x p-3" style="background-color: #f8f9fa; display: none;">
+    <audio id="audioPlayer" style="display: none;"></audio>
+    <div class="text-center mt-2">
+      <img id="audioThumbnail" src="" class="img-fluid" style="width: 50px; height: 50px; float: left; margin-right: 10px;">
+      <div id="audioName" style="float: left;"></div>
+      <button class="btn btn-primary rounded-circle" onclick="togglePlayPause()">
+        <i id="playPauseIcon" class="fas fa-play"></i>
+      </button>
+    </div>
+    <div class="sound-bar">
+      <div id="soundBar"></div>
+    </div>
+  </div>
+
+  <script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    var audioPlayerContainer = document.getElementById('audioPlayerContainer');
+    var playPauseIcon = document.getElementById('playPauseIcon');
+    var audioThumbnail = document.getElementById('audioThumbnail');
+    var audioName = document.getElementById('audioName');
+    var soundBar = document.getElementById('soundBar');
+
+    function showPlayer(audioSrc, imageSrc, name) {
+      audioPlayer.src = audioSrc;
+      audioPlayer.play();
+      audioThumbnail.src = imageSrc;
+      audioName.innerText = name;
+      playPauseIcon.classList.remove('fa-play');
+      playPauseIcon.classList.add('fa-pause');
+      audioPlayerContainer.style.display = 'block';
+    }
+
+    function togglePlayPause() {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseIcon.classList.remove('fa-play');
+        playPauseIcon.classList.add('fa-pause');
+      } else {
+        audioPlayer.pause();
+        playPauseIcon.classList.remove('fa-pause');
+        playPauseIcon.classList.add('fa-play');
+      }
+    }
+
+    audioPlayer.addEventListener('pause', function() {
+      playPauseIcon.classList.remove('fa-pause');
+      playPauseIcon.classList.add('fa-play');
+    });
+
+    audioPlayer.addEventListener('timeupdate', updateSoundBar);
+
+    function updateSoundBar() {
+      var currentTime = audioPlayer.currentTime;
+      var duration = audioPlayer.duration;
+      var percentage = (currentTime / duration) * 100;
+      soundBar.style.width = percentage + '%';
+    }
+  </script>
+</body>
+</html>

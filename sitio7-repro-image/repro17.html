@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor de Audio Personalizado con Bootstrap</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <!-- Imágenes -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="../sitio-web-radio-1/img/alfinradio.png" class="img-fluid" alt="Imagen 1" onclick="showPlayer('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this.src, 'Radio Segovia')">
+      </div>
+      <div class="col-md-4">
+        <img src="../sitio-web-radio-1/img/alfinradio.png" class="img-fluid" alt="Imagen 2" onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Audio 2')">
+      </div>
+      <div class="col-md-4">
+        <img src="imagen3.jpg" class="img-fluid" alt="Imagen 3" onclick="showPlayer('audio3.mp3', this.src, 'Audio 3')">
+      </div>
+    </div>
+  </div>
+
+  <!-- Reproductor de audio personalizado -->
+  <div id="audioPlayerContainer" class="position-fixed bottom-0 start-50 translate-middle-x p-3" style="background-color: #f8f9fa; display: none;">
+    <audio id="audioPlayer" style="display: none;"></audio>
+    <div class="text-center mt-2">
+      <img id="audioThumbnail" src="" class="img-fluid" style="width: 50px; height: 50px; float: left; margin-right: 10px;">
+      <div id="audioName" style="float: left;"></div>
+      <button class="btn btn-primary rounded-circle" onclick="togglePlayPause()">
+        <i id="playPauseIcon" class="fas fa-play"></i>
+      </button>
+    </div>
+    <canvas id="audioVisualizer" width="300" height="50" style="margin-top: 10px;"></canvas>
+  </div>
+
+  <script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    var audioPlayerContainer = document.getElementById('audioPlayerContainer');
+    var playPauseIcon = document.getElementById('playPauseIcon');
+    var audioThumbnail = document.getElementById('audioThumbnail');
+    var audioName = document.getElementById('audioName');
+    var audioVisualizer = document.getElementById('audioVisualizer');
+    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    var analyser = audioCtx.createAnalyser();
+    analyser.fftSize = 256;
+    var dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+    function showPlayer(audioSrc, imageSrc, name) {
+      audioPlayer.src = audioSrc;
+      audioPlayer.play();
+      audioThumbnail.src = imageSrc;
+      audioName.innerText = name;
+      playPauseIcon.classList.remove('fa-play');
+      playPauseIcon.classList.add('fa-pause');
+      audioPlayerContainer.style.display = 'block';
+      visualize();
+    }
+
+    function togglePlayPause() {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseIcon.classList.remove('fa-play');
+        playPauseIcon.classList.add('fa-pause');
+        visualize();
+      } else {
+        audioPlayer.pause();
+        playPauseIcon.classList.remove('fa-pause');
+        playPauseIcon.classList.add('fa-play');
+      }
+    }
+
+    function visualize() {
+      var source = audioCtx.createMediaElementSource(audioPlayer);
+      source.connect(analyser);
+      analyser.connect(audioCtx.destination);
+      draw();
+    }
+
+    function draw() {
+      requestAnimationFrame(draw);
+      analyser.getByteFrequencyData(dataArray);
+      var width = Math.floor(dataArray.length / 2);
+      var barWidth = audioVisualizer.width / width;
+      var canvasCtx = audioVisualizer.getContext('2d');
+      canvasCtx.clearRect(0, 0, audioVisualizer.width, audioVisualizer.height);
+      var gradient = canvasCtx.createLinearGradient(0, 0, 0, audioVisualizer.height);
+      gradient.addColorStop(0, 'blue');
+      gradient.addColorStop(0.5, 'green');
+      gradient.addColorStop(1, 'red');
+      for (var i = 0; i < width; i++) {
+        var value = dataArray[i] / 255;
+        var barHeight = audioVisualizer.height * value;
+        canvasCtx.fillStyle = gradient;
+        canvasCtx.fillRect(i * barWidth, audioVisualizer.height - barHeight, barWidth, barHeight);
+      }
+    }
+
+    audioPlayer.addEventListener('pause', function() {
+      playPauseIcon.classList.remove('fa-pause');
+      playPauseIcon.classList.add('fa-play');
+    });
+  </script>
+</body>
+</html>
