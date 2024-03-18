@@ -43,15 +43,14 @@
   <div id="audioPlayerContainer" class="position-fixed bottom-0 start-50 translate-middle-x p-3" style="background-color: #f8f9fa; display: none;">
     <audio id="audioPlayer" style="display: none;"></audio>
     <div class="text-center mt-2">
-      <img id="audioThumbnail" src="" class="img-fluid" style="width: 50px; height: 50px; float: left; margin-right: 10px;">
-      <div id="audioName" style="float: left;"></div>
+      <img id="audioThumbnail" src="" class="img-fluid" style="width: 50px; height: 50px; margin-right: 10px;">
       <button class="btn btn-primary rounded-circle" onclick="togglePlayPause()">
         <i id="playPauseIcon" class="fas fa-play"></i>
       </button>
+      <div id="audioName" style=""></div>
+
     </div>
-    <div id="progressBar">
-      <div id="progress"></div>
-    </div>
+
   </div>
 
   <script>
