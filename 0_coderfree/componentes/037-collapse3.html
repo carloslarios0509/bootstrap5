@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acordeón Horizontal con Bootstrap 5</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .collapse-item {
+      display: inline-block;
+      margin-right: 10px; /* Espacio entre los botones */
+    }
+    .collapse {
+      width: auto; /* Ancho automático para el contenido colapsado */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  
+  <!-- Botón 1 -->
+  <button class="btn btn-primary collapse-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+    Botón 1
+  </button>
+  
+  <!-- Información del Botón 1 -->
+  <div class="collapse" id="collapseOne">
+    <div class="card card-body">
+      Información del botón 1
+    </div>
+  </div>
+  
+  <!-- Botón 2 -->
+  <button class="btn btn-primary collapse-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+    Botón 2
+  </button>
+  
+  <!-- Información del Botón 2 -->
+  <div class="collapse" id="collapseTwo">
+    <div class="card card-body">
+      Información del botón 2
+    </div>
+  </div>
+  
+  <!-- Botón 3 -->
+  <button class="btn btn-primary collapse-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+    Botón 3
+  </button>
+  
+  <!-- Información del Botón 3 -->
+  <div class="collapse" id="collapseThree">
+    <div class="card card-body">
+      Información del botón 3
+    </div>
+  </div>
+  
+  <!-- Botón 4 -->
+  <button class="btn btn-primary collapse-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+    Botón 4
+  </button>
+  
+  <!-- Información del Botón 4 -->
+  <div class="collapse" id="collapseFour">
+    <div class="card card-body">
+      Información del botón 4
+    </div>
+  </div>
+  
+  <!-- Botón 5 -->
+  <button class="btn btn-primary collapse-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+    Botón 5
+  </button>
+  
+  <!-- Información del Botón 5 -->
+  <div class="collapse" id="collapseFive">
+    <div class="card card-body">
+      Información del botón 5
+    </div>
+  </div>
+  
+  <!-- Botón 6 -->
+  <button class="btn btn-primary collapse-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+    Botón 6
+  </button>
+  
+  <!-- Información del Botón 6 -->
+  <div class="collapse" id="collapseSix">
+    <div class="card card-body">
+      Información del botón 6
+    </div>
+  </div>
+  
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
