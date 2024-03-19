@@ -186,26 +186,22 @@
 
 
     <!-- Reproductor de audio personalizado -->
-    <div id="audioPlayerContainer" class="position-fixed bottom-0 start-50 translate-middle-x p-2"
+    <div id="audioPlayerContainer" class="bottom-0 start-50 translate-middle-x p-2"
         style="background-color: #b3b6b9; display: none;">
+
         <audio id="audioPlayer" style="display: none;"></audio>
 
-        <div class="float-start">
+        <div class="d-flex align-items-left align-items-lg-stretch">            
 
             <img id="audioThumbnail" src="" class="img-fluid rounded"
                 style="width: 50px; height: 50px; margin-right: 10px;">
 
-            <button class="btn btn-primary rounded-circle" onclick="togglePlayPause()">
+            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;" onclick="togglePlayPause()">
                 <i id="playPauseIcon" class="fas fa-play"></i>
             </button>
 
-            <div id="audioName"></div>
+            <div class="text-primary py-2 px-0 h5" id="audioName"></div> 
 
-        </div>
-        <div class="border d-flex">
-            <div class="border p-2 order-lg-2">Item #01</div>
-            <div class="border p-2 order-lg-1">Item #02</div>
-            <div class="border p-2 order-lg-3">Item #03</div>
         </div>
 
 
