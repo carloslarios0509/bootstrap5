@@ -23,7 +23,7 @@
 
     <style>
         body {
-            background-color: #333;
+            background-color: #000000;
             /* Color oscuro de fondo */
             margin: 0;
             padding: 0;
@@ -47,7 +47,7 @@
             margin-right: 10px;
         }
 
-        #progressBar {
+/*         #progressBar {
             width: 100%;
             height: 10px;
             background-color: #ddd;
@@ -60,7 +60,7 @@
             border-radius: 5px;
             background-color: #007bff;
             width: 0;
-        }
+        } */
 
         /* Estilo personalizado para los botones de imagen */
         .image-button {
@@ -440,30 +440,32 @@
         </div>
     </footer>
 
-
     <!-- Reproductor de audio personalizado -->
     <div id="audioPlayerContainer" class="bottom-0 start-50 translate-middle-x p-2"
-        style="background-color: #ced9e4; display: none;">
+        style="background-color: #a6c2dd; display: none;">
 
         <audio id="audioPlayer" style="display: none;"></audio>
 
-        <div class="d-flex align-items-left align-items-lg-stretch">
+        <div class="d-flex align-items-left" style="height: 4rem;">
+            <div class="py-2 px-1">
+                <img id="audioThumbnail" src="" class="img-fluid rounded"
+                    style="width: 50px; height: 50px; margin-right: 10px;">
+            </div>
+            <div class="py-2 px-1">
+                <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;"
+                    onclick="togglePlayPause()">
+                    <i id="playPauseIcon" class="fas fa-play"></i>
+                </button>
+            </div>
+            <div class="py-0 px-1">
+                <div class="text-primary text-start h5" id="audioName"></div>
 
-            <img id="audioThumbnail" src="" class="img-fluid rounded"
-                style="width: 50px; height: 50px; margin-right: 10px;">
-
-            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;"
-                onclick="togglePlayPause()">
-                <i id="playPauseIcon" class="fas fa-play"></i>
-            </button>
-
-            <div class="text-primary h4" id="audioName"></div>
-            <div class="text-primary h6"><p>99.3 FM - Nicaragua</p></div>
+                <div class="text-primary text-start h6">
+                    <p>99.3 FM - Nicaragua</p>
+                </div>
+            </div>
 
         </div>
-
-
-
     </div>
 
     <!-- js Reproductor de audio -->
@@ -473,7 +475,9 @@
         var playPauseIcon = document.getElementById('playPauseIcon');
         var audioThumbnail = document.getElementById('audioThumbnail');
         var audioName = document.getElementById('audioName');
-        var progressBar = document.getElementById('progressBar');
+
+        /* var progressBar = document.getElementById('progressBar'); */
+        
         var progress = document.getElementById('progress');
 
         function showPlayer(audioSrc, imageSrc, name) {
@@ -484,7 +488,9 @@
             playPauseIcon.classList.remove('fa-play');
             playPauseIcon.classList.add('fa-pause');
             audioPlayerContainer.style.display = 'block';
-            updateProgressBar();
+
+            /* updateProgressBar(); */
+
         }
 
         function togglePlayPause() {
@@ -504,12 +510,16 @@
             playPauseIcon.classList.add('fa-play');
         });
 
-        audioPlayer.addEventListener('timeupdate', updateProgressBar);
 
-        function updateProgressBar() {
+
+        /* audioPlayer.addEventListener('timeupdate', updateProgressBar); */
+
+/*         function updateProgressBar() {
             var progressValue = (audioPlayer.currentTime / audioPlayer.duration) * 100;
             progress.style.width = progressValue + '%';
-        }
+        } */
+
+
     </script>
 
     <script>
