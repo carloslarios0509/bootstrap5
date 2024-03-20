@@ -66,10 +66,53 @@
         .image-button {
             cursor: pointer;
         }
+
+        /* Estilos para el preload */
+        .preload-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            /* Color de fondo inicial */
+            transition: background-color 0.5s ease;
+            /* Transición suave para el cambio de color */
+        }
+
+        .custom-logo {
+            width: 100px;
+            /* Ajusta el tamaño según sea necesario */
+            height: auto;
+            animation: spin 2s linear infinite;
+            /* Cambia la duración de la animación aquí */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="preload-container" id="preload">
+        <img src="img/favicon.png" alt="Logo" class="custom-logo">
+    </div>
     <div class="container">
         <!-- Barra de navegación -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -149,18 +192,19 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-                <img src="img/radiosegovia.png" class="img-fluid rounded image-button"  data-bs-toggle="modal" data-bs-target="#mi-modal" alt=" Radio Segovia"
+                <img src="img/radiosegovia.png" class="img-fluid rounded image-button" data-bs-toggle="modal"
+                    data-bs-target="#mi-modal" alt=" Radio Segovia"
                     onclick="showPlayer('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this.src, 'Radio Segovia')">
             </div>
-
+            <!-- modal para cada radio -->
             <div class="modal fade" id="mi-modal" data-bs-backdrop="static">
                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-center">
                     <div class="modal-content">
 
                         <div class="modal-header">
 
-                            
-                            
+
+
                             <h2 class="modal-tittle">Radio Segovia</h2>
                             <button class="btn btn-close" data-bs-dismiss="modal"></button>
                         </div>
@@ -173,7 +217,7 @@
                             <p>Transmitiendo desde Ocotal Nueva Segovia, Nicaragua</p>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>                            
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                         </div>
 
                     </div>
@@ -182,12 +226,65 @@
 
 
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-                <img src="img/1402FM.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                <img src="img/1402FM.jpg" class="img-fluid rounded image-button" data-bs-toggle="modal"
+                    data-bs-target="#mi-modal2" alt="Imagen 2"
                     onclick="showPlayer('https://c21.radioboss.fm/stream/82', this.src, '1402FM RADIO - Costa Rica')">
             </div>
+            <!-- modal para cada radio -->
+            <div class="modal fade" id="mi-modal2" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-center">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h2 class="modal-tittle">1402 FM Radio</h2>
+                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3>Radio Online</h3>
+                            <h4>Frecuencia: 100.3 FM</h4>
+                            <h4>Telefono: 273 22 058</h4>
+                            <h5>País: Costa Rica</h5>
+                            <h5>Géneros: Noticias, Tropical, Recuerdos, Variado</h5>
+                            <p>Transmitiendo a todas las partes del mundo, desde Costa Rica</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
-                <img src="img/LOGO-ESTACION RETRO HITS.jpg" class="img-fluid rounded image-button" alt="Imagen 3"
+                <img src="img/LOGO-ESTACION RETRO HITS.jpg" class="img-fluid rounded image-button"
+                    data-bs-toggle="modal" data-bs-target="#mi-modal3" alt="Imagen 3"
                     onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Estación Retro Hits')">
+            </div>
+            <!-- modal para cada radio -->
+            <div class="modal fade" id="mi-modal3" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-center">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+
+
+
+                            <h2 class="modal-tittle">Radio Segovia</h2>
+                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3>La poderosa del norte</h3>
+                            <h4>Frecuencia: 97.3 FM</h4>
+                            <h4>Telefono: 273 22 058</h4>
+                            <h5>País: Nicaragua</h5>
+                            <h5>Géneros: Noticias, Tropical, Recuerdos, Variado</h5>
+                            <p>Transmitiendo desde Ocotal Nueva Segovia, Nicaragua</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
                 <img src="img/logo official stereo cristiana.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
@@ -352,15 +449,16 @@
 
         <div class="d-flex align-items-left align-items-lg-stretch">
 
-            <img id="audioThumbnail" src="" class="img-fluid rounded"  style="width: 50px; height: 50px; margin-right: 10px;">
+            <img id="audioThumbnail" src="" class="img-fluid rounded"
+                style="width: 50px; height: 50px; margin-right: 10px;">
 
             <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;"
                 onclick="togglePlayPause()">
                 <i id="playPauseIcon" class="fas fa-play"></i>
             </button>
 
-            <div class="text-primary py-2 px-0 h5" id="audioName"></div>
-            
+            <div class="text-primary h4" id="audioName"></div>
+            <div class="text-primary h6"><p>99.3 FM - Nicaragua</p></div>
 
         </div>
 
@@ -412,6 +510,16 @@
             var progressValue = (audioPlayer.currentTime / audioPlayer.duration) * 100;
             progress.style.width = progressValue + '%';
         }
+    </script>
+
+    <script>
+        // Simula una carga artificialmente
+        setTimeout(function () {
+            var preload = document.getElementById('preload');
+            var mainContent = document.getElementById('main-content');
+            preload.style.display = 'none'; // Oculta el preload después de 3 segundos
+            mainContent.style.display = 'block'; // Muestra el contenido principal
+        }, 3000); // Tiempo de espera en milisegundos (en este caso, 3000ms = 3 segundos)
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

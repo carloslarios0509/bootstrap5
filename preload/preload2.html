@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preload Personalizado</title>
+  <style>
+    /* Estilos para el preload */
+    .preload-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .preload-spinner {
+      border: 4px solid #f3f3f3; /* Gris claro */
+      border-top: 4px solid #3498db; /* Azul */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="preload-container">
+    <div class="preload-spinner"></div>
+  </div>
+</body>
+</html>
