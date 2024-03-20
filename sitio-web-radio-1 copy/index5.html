@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Título de tu Sitio Web</title>
+  <!-- Enlaces a los archivos CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Agrega tu propio CSS personalizado si es necesario -->
+  <link href="styles.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+  <style>
+    body {
+      background-color: #333;
+      /* Color oscuro de fondo */
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* Estilos personalizados para el reproductor de audio */
+    #audioPlayerContainer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f8f9fa;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .audio-player img {
+      width: 40px;
+      margin-right: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+
+        <img src="img/rv-logo.png" alt="">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+          <!-- Campo de búsqueda centrado -->
+          <form class="d-flex justify-content-center">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Carrusel con efecto de slide -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/rv-slider1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/rv-slider2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/rv-slider3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/rv-slider1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/rv-slider2.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="container mt-4 text-light">
+    <h1>Bienvenido a RaVir</h1>
+    <p>Este es un sitio web básico creado con Bootstrap 5. Puedes personalizarlo y expandirlo según tus necesidades.</p>
+  </div>
+
+  <!-- Imágenes -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="../sitio-web-radio-1/img/150-years-logo-design.webp" class="img-fluid" alt="Imagen 1"
+          onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
+      </div>
+      <div class="col-md-4">
+        <img src="../sitio-web-radio-1/img/futura.webp" class="img-fluid" alt="Imagen 2"
+          onclick="playAudio('https://stm2.xcast.com.br:7546/;', this)">
+      </div>
+      <div class="col-md-4">
+        <img src="../sitio-web-radio-1/img/labuenisima.webp" class="img-fluid" alt="Imagen 3"
+          onclick="playAudio('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this)">
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Media_230804_010708.gif" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/yr738hxywg9vv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/alfinradio.png" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/e97vtkkuhchvv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo official stereo cristiana.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/93xw7pnn21zuv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Radio alegria.png" class="card-img-top" alt="..."
+            onclick="playAudio('https://stream.zeno.fm/44nv2o0vo61uv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/radio-universo.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8190/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/lamore.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream20.usastreams.com/8148/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/104fm.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8452/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Media_230804_010708.gif" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/yr738hxywg9vv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/alfinradio.png" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/e97vtkkuhchvv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo official stereo cristiana.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/93xw7pnn21zuv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Radio alegria.png" class="card-img-top" alt="..."
+            onclick="playAudio('https://stream.zeno.fm/44nv2o0vo61uv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/radio-universo.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8190/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/lamore.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream20.usastreams.com/8148/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/104fm.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8452/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Media_230804_010708.gif" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/yr738hxywg9vv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/alfinradio.png" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/e97vtkkuhchvv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo official stereo cristiana.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/93xw7pnn21zuv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Radio alegria.png" class="card-img-top" alt="..."
+            onclick="playAudio('https://stream.zeno.fm/44nv2o0vo61uv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/radio-universo.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8190/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/lamore.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream20.usastreams.com/8148/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/104fm.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8452/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Media_230804_010708.gif" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/yr738hxywg9vv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/alfinradio.png" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/e97vtkkuhchvv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo official stereo cristiana.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/93xw7pnn21zuv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Radio alegria.png" class="card-img-top" alt="..."
+            onclick="playAudio('https://stream.zeno.fm/44nv2o0vo61uv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/radio-universo.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8190/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/lamore.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream20.usastreams.com/8148/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/104fm.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8452/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Media_230804_010708.gif" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/yr738hxywg9vv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/alfinradio.png" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/e97vtkkuhchvv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo official stereo cristiana.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/93xw7pnn21zuv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Radio alegria.png" class="card-img-top" alt="..."
+            onclick="playAudio('https://stream.zeno.fm/44nv2o0vo61uv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/radio-universo.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8190/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/lamore.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream20.usastreams.com/8148/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/104fm.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8452/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/150-years-logo-design.webp" class="card-img-top" alt="..."
+            onclick="playAudio('http://s2.suenalive.com/8362/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Media_230804_010708.gif" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/yr738hxywg9vv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/alfinradio.png" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/e97vtkkuhchvv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/logo official stereo cristiana.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream.zeno.fm/93xw7pnn21zuv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/Radio alegria.png" class="card-img-top" alt="..."
+            onclick="playAudio('https://stream.zeno.fm/44nv2o0vo61uv', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/radio-universo.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8190/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/lamore.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('http://stream20.usastreams.com/8148/stream', this)">
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+        <div class="card">
+          <img src="img/104fm.jpg" class="card-img-top" alt="..."
+            onclick="playAudio('https://s1.suenalive.com/8452/stream', this)">
+        </div>
+      </div>
+
+
+      <!-- Repite los elementos según sea necesario para cumplir con tus requisitos -->
+    </div>
+  </div>
+
+
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-light text-center py-4 mb-4">
+    <div class="container">
+      <p>Derechos de Autor &copy; 2024 - Tu Nombre</p>
+    </div>
+  </footer>
+
+  <!-- Reproductor de audio -->
+  <div id="audioPlayerContainer">
+    <audio id="audioPlayer">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <button onclick="togglePlayPause()">Play/Pausa</button>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" oninput="setVolume(this.value)">
+  </div>
+
+  <script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    var playPauseButton = document.querySelector('#audioPlayerContainer button');
+    var volumeControl = document.getElementById('volumeControl');
+
+    function playAudio(audioSrc, clickedImage) {
+      audioPlayer.src = audioSrc;
+      audioPlayer.play();
+      showImageInPlayer(clickedImage);
+    }
+
+    function togglePlayPause() {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseButton.textContent = 'Pausa';
+      } else {
+        audioPlayer.pause();
+        playPauseButton.textContent = 'Play';
+      }
+    }
+
+    function setVolume(volume) {
+      audioPlayer.volume = volume;
+    }
+
+    function showImageInPlayer(image) {
+      var player = document.getElementById('audioPlayerContainer');
+      player.style.backgroundImage = 'url(' + image.src + ')';
+      player.style.backgroundSize = 'cover';
+    }
+  </script>
+
+
+
+
+
+  <!-- Scripts de Bootstrap y JavaScript -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- Agrega tus propios scripts personalizados si es necesario -->
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
