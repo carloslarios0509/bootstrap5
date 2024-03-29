@@ -6,107 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproductor de Audio Personalizado con Bootstrap</title>
 
-    <!-- Enlaces a los archivos CSS de Bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-
     <!-- Agrega tu propio CSS personalizado si es necesario -->
-    <!-- <link href="styles.css" rel="stylesheet"> -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
-
-    <style>
-        body {
-            background-color: #000000;
-            /* Color oscuro de fondo */
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Estilos personalizados para el reproductor de audio */
-        #audioPlayerContainer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-        }
-
-        .audio-player img {
-            width: 40px;
-            margin-right: 10px;
-        }
-
-        /*         #progressBar {
-            width: 100%;
-            height: 10px;
-            background-color: #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        #progress {
-            height: 100%;
-            border-radius: 5px;
-            background-color: #007bff;
-            width: 0;
-        } */
-
-        /* Estilo personalizado para los botones de imagen */
-        .image-button {
-            cursor: pointer;
-        }
-
-        /* Estilos para el preload */
-        .preload-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #333;
-            /* Color de fondo inicial */
-            transition: background-color 0.5s ease;
-            /* Transición suave para el cambio de color */
-        }
-
-        .custom-logo {
-            width: 100px;
-            /* Ajusta el tamaño según sea necesario */
-            height: auto;
-            animation: spin 2s linear infinite;
-            /* Cambia la duración de la animación aquí */
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -283,38 +189,38 @@
                             <button class="btn btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="row">
+                            <div class="row text-center">
 
-                                <div class="col col-12 text-center mt-1">
+                                <div class="col col-12 mt-1">
                                     <h4>La poderosa del norte</h4>
                                 </div>
 
-                                <div class="col col-4 text-center mt-1">
+                                <div class="col col-4 mt-1">
                                     <h5>Frecuencia: <strong class="text-primary">97.3 FM</strong></h5>
                                 </div>
 
-                                <div class="col col-4 text-center mt-1">
+                                <div class="col col-4 mt-1">
                                     <h5>Telefono: <strong class="text-primary">273 22 058</strong></h5>
                                 </div>
 
-                                <div class="col col-4 text-center mt-1">
+                                <div class="col col-4 mt-1">
                                     <h6>País: <strong class="text-primary">Nicaragua</strong></h6>
                                 </div>
 
-                                <div class="col col-12 text-center mt-1">
+                                <div class="col col-12 mt-1">
                                     <h6>Géneros: <strong class="text-primary">Noticias, Tropical, Recuerdos,
                                             Variado</strong></h6>
                                 </div>
 
-                                <div class="col col-12 text-center mt-1">
+                                <div class="col col-12 mt-1">
                                     <h4>Equipo de trabajo</h4>
                                 </div>
 
-                                <div class="row mx-auto p-3">
+                                <div class="row mx-auto p-3" style="justify-content: center">
                                     <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mt-3">
                                         <div class="card border-primary text-primary">
                                             <img class="card-img-top"
-                                                src="https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg"
+                                                src="https://cdn.pixabay.com/photo/2015/07/20/12/53/gehlert-852762_640.jpg"
                                                 alt="">
                                             <div class="card-body">
                                                 <h5 class="h5 card-title">Juan Lopez</h5>
@@ -325,21 +231,10 @@
                                     <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mt-3">
                                         <div class="card border-primary text-primary">
                                             <img class="card-img-top"
-                                                src="https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg"
+                                                src="https://cdn.pixabay.com/photo/2024/02/12/14/56/woman-8568693_1280.jpg"
                                                 alt="">
                                             <div class="card-body">
-                                                <h5 class="h5 card-title">Juan Lopez</h5>
-                                                <p class="h6 card-texto">Director</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mt-3">
-                                        <div class="card border-primary text-primary">
-                                            <img class="card-img-top"
-                                                src="https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg"
-                                                alt="">
-                                            <div class="card-body">
-                                                <h1 class="h5 card-title">Luis Sarantes</h1>
+                                                <h5 class="h5 card-title">Juana Rodriguez</h5>
                                                 <p class="h6 card-texto">Periodista</p>
                                             </div>
                                         </div>
@@ -347,10 +242,10 @@
                                     <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mt-3">
                                         <div class="card border-primary text-primary">
                                             <img class="card-img-top"
-                                                src="https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg"
+                                                src="https://cdn.pixabay.com/photo/2016/11/29/11/09/woman-1869116_1280.jpg"
                                                 alt="">
                                             <div class="card-body">
-                                                <h1 class="h5 card-title">Luis Sarantes</h1>
+                                                <h1 class="h5 card-title">Luisa Sarantes</h1>
                                                 <p class="h6 card-texto">Periodista</p>
                                             </div>
                                         </div>
@@ -361,48 +256,50 @@
                                     <h4>Redes Sociales</h4>
 
                                     <img src="img/facebook.png" class="img-fluid rounded image-button"
-                                        style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
 
                                     <img src="img/instagram.png" class="img-fluid rounded image-button"
-                                        style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
 
                                     <img src="img/x.png" class="img-fluid rounded image-button"
-                                        style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
 
                                     <img src="img/whatsapp.png" class="img-fluid rounded image-button"
-                                        style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
 
                                     <img src="img/youtube.png" class="img-fluid rounded image-button"
-                                        style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
-
-                                    <img src="img/whatsapp.png" class="img-fluid rounded image-button"
-                                        style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
 
                                     <img src="img/telegram.png" class="img-fluid rounded image-button"
-                                        style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
 
                                 </div>
 
+                                <div class="mt-4">
 
+                                    <a href="#" target="_blank">
+                                        <button class="btn btn-primary" style="background-color: blue; color: white;">Visitar Sitio web!</button>
+                                    </a>
+                                    
+                                </div>
 
-
-                                <h6>Sitio Web:
-                                    <link rel="stylesheet" href="#">www.sitioradio.com
-                                </h6>
-                                <h4>Programas destacados</h4>
+                                <div class="mt-4">
+                                    <h4>Programas destacados</h4>
                                 <p>Programa 1: Lorem ipsum dolor sit.</p>
                                 <p>Programa 1: Lorem ipsum dolor sit.</p>
                                 <p>Programa 1: Lorem ipsum dolor sit.</p>
-                                <h4>Historia</h4>
+
+                                </div>
+
+                                <div>
+                                    <h4>Historia</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio deleniti
                                     nam
                                     id magnam enim, ut quos sed mollitia nihil voluptates, pariatur ipsam velit
                                     sequi
                                     animi alias temporibus cum harum.</p>
-
-
-
-
+                                </div>
+                                
                             </div>
 
                         </div>
@@ -419,61 +316,13 @@
                     onclick="showPlayer('https://c21.radioboss.fm/stream/82', this.src, '1402FM RADIO - Costa Rica')">
             </div>
 
-            <!-- modal para cada radio -->
-            <div class="modal fade" id="mi-modal2" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-scrollable modal-dialog-center">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-tittle">1402 FM Radio</h2>
-                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h3>Radio Online</h3>
-                            <h4>Frecuencia: 100.3 FM</h4>
-                            <h4>Telefono: 273 22 058</h4>
-                            <h5>País: Costa Rica</h5>
-                            <h5>Géneros: Noticias, Tropical, Recuerdos, Variado</h5>
-                            <p>Transmitiendo a todas las partes del mundo, desde Costa Rica</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
                 <img src="img/LOGO-ESTACION RETRO HITS.jpg" class="img-fluid rounded image-button"
                     data-bs-toggle="modal" data-bs-target="#mi-modal3" alt="Imagen 3"
                     onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Estación Retro Hits')">
             </div>
-            <!-- modal para cada radio -->
-            <div class="modal fade" id="mi-modal3" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-scrollable modal-dialog-center">
-                    <div class="modal-content">
 
-                        <div class="modal-header">
-
-
-
-                            <h2 class="modal-tittle">Radio Segovia</h2>
-                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h3>La poderosa del norte</h3>
-                            <h4>Frecuencia: 97.3 FM</h4>
-                            <h4>Telefono: 273 22 058</h4>
-                            <h5>País: Nicaragua</h5>
-                            <h5>Géneros: Noticias, Tropical, Recuerdos, Variado</h5>
-                            <p>Transmitiendo desde Ocotal Nueva Segovia, Nicaragua</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
                 <img src="img/logo official stereo cristiana.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
                     onclick="showPlayer('http://stream.zeno.fm/93xw7pnn21zuv', this.src, 'Radio Stereo Cristiana')">
@@ -482,13 +331,16 @@
                 <img src="img/aguila.png" class="img-fluid rounded image-button" alt="Imagen 2"
                     onclick="showPlayer('https://streaming01.shockmedia.com.ar:10935/stream', this.src, 'El Aguila Radio')">
             </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/logo-radio-corporacion.png" class="img-fluid rounded image-button" alt="radio-corporacion"
+                    onclick="showPlayer('http://stream.zeno.fm/gwkd66k0a7duv', this.src, 'Radio Corporación')">
+            </div>
+
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
                 <img src="img/radio-universo.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
                     onclick="showPlayer('https://s1.suenalive.com/8190/stream', this.src, 'Radio Universo')">
             </div>
-
-
-
 
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
                 <img src="img/lagigante.jpg" class="img-fluid rounded image-button" alt="..."
@@ -553,108 +405,19 @@
                     data-bs-target="#mi-modal" alt="..."
                     onclick="showPlayer('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this.src, 'Radio Segovia')">
             </div>
-            <!-- modal para cada radio -->
-            <div class="modal fade" id="mi-modal" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-scrollable modal-dialog-center">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-
-                            <img src="img/radiosegovia.png" class="img-fluid rounded image-button"
-                                style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
-
-                            <h2 class="modal-tittle">Radio Segovia</h2>
-                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h4>La poderosa del norte</h4>
-                            <h5>Frecuencia: 97.3 FM</h5>
-                            <h5>Telefono: 273 22 058</h5>
-                            <h6>País: Nicaragua</h6>
-                            <h6>Géneros: Noticias, Tropical, Recuerdos, Variado</h6>
-                            <h6>Sitio Web:
-                                <link rel="stylesheet" href="#">www.sitioradio.com
-                            </h6>
-                            <h4>Historia</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta possimus excepturi
-                                commodi, saepe mollitia sint repellendus corrupti voluptate odit voluptatem aut
-                                doloribus iure nulla! Iusto reprehenderit inventore accusantium modi odit!</p>
-                            <h4>Equipo de trabajo</h4>
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <p>Nota: Reportar audio caido</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
 
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
                 <img src="img/1402FM.jpg" class="img-fluid rounded image-button" data-bs-toggle="modal"
                     data-bs-target="#mi-modal2" alt="Imagen 2"
                     onclick="showPlayer('https://c21.radioboss.fm/stream/82', this.src, '1402FM RADIO - Costa Rica')">
             </div>
-            <!-- modal para cada radio -->
-            <div class="modal fade" id="mi-modal2" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-scrollable modal-dialog-center">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-tittle">1402 FM Radio</h2>
-                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h3>Radio Online</h3>
-                            <h4>Frecuencia: 100.3 FM</h4>
-                            <h4>Telefono: 273 22 058</h4>
-                            <h5>País: Costa Rica</h5>
-                            <h5>Géneros: Noticias, Tropical, Recuerdos, Variado</h5>
-                            <p>Transmitiendo a todas las partes del mundo, desde Costa Rica</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
                 <img src="img/LOGO-ESTACION RETRO HITS.jpg" class="img-fluid rounded image-button"
                     data-bs-toggle="modal" data-bs-target="#mi-modal3" alt="Imagen 3"
                     onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Estación Retro Hits')">
             </div>
-            <!-- modal para cada radio -->
-            <div class="modal fade" id="mi-modal3" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-scrollable modal-dialog-center">
-                    <div class="modal-content">
 
-                        <div class="modal-header">
-
-
-
-                            <h2 class="modal-tittle">Radio Segovia</h2>
-                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h3>La poderosa del norte</h3>
-                            <h4>Frecuencia: 97.3 FM</h4>
-                            <h4>Telefono: 273 22 058</h4>
-                            <h5>País: Nicaragua</h5>
-                            <h5>Géneros: Noticias, Tropical, Recuerdos, Variado</h5>
-                            <p>Transmitiendo desde Ocotal Nueva Segovia, Nicaragua</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
                 <img src="img/logo official stereo cristiana.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
                     onclick="showPlayer('http://stream.zeno.fm/93xw7pnn21zuv', this.src, 'Radio Stereo Cristiana')">
@@ -742,7 +505,7 @@
 
     <!-- Reproductor de audio personalizado -->
     <div id="audioPlayerContainer" class="bottom-0 start-50 translate-middle-x p-2"
-        style="background-color: #a6c2dd; display: none;">
+        style="background-color: #a6acdd; display: none;">
 
         <audio id="audioPlayer" style="display: none;"></audio>
 

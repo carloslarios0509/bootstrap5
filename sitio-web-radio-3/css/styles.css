@@ -1,0 +1,67 @@
+body {
+    background-color: #212529 !important;
+    /* Color oscuro de fondo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos personalizados para el reproductor de audio */
+#audioPlayerContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;   
+    padding: 10px;    
+    display: flex;
+    
+}
+
+.audio-player img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Estilo personalizado para los botones de imagen */
+.image-button {
+    cursor: pointer;
+}
+
+/* Estilos para el preload */
+.preload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    /* Color de fondo inicial */
+    transition: background-color 0.5s ease;
+    /* Transición suave para el cambio de color */
+}
+
+.custom-logo {
+    width: 100px;
+    /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    animation: spin 2s linear infinite;
+    /* Cambia la duración de la animación aquí */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
