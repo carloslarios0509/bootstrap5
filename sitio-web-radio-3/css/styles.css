@@ -3,7 +3,18 @@ body {
     /* Color oscuro de fondo */
     margin: 0;
     padding: 0;
+    /*padding-top: 60px; /* Ajuste para el navbar fijo */
+    position: relative; /* Necesario para que el botón flotante funcione correctamente */
 }
+
+.btn-scroll-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    display: none; /* Ocultar el botón por defecto */
+    z-index: 9999; /* Asegura que el botón esté sobre otros elementos */
+}
+
 
 /* Estilos personalizados para el reproductor de audio */
 #audioPlayerContainer {
@@ -27,16 +38,16 @@ body {
 }
 
 /* Estilos para el preload */
-.preload-container {
+/* .preload-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #333;
     /* Color de fondo inicial */
-    transition: background-color 0.5s ease;
+    /*transition: background-color 0.5s ease;
     /* Transición suave para el cambio de color */
-}
+} */
 
 .custom-logo {
     width: 100px;
@@ -44,6 +55,26 @@ body {
     height: auto;
     animation: spin 2s linear infinite;
     /* Cambia la duración de la animación aquí */
+}
+
+
+#search-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#search-form input[type="search"] {
+    margin-right: 10px;
 }
 
 @keyframes spin {
@@ -63,5 +94,11 @@ body {
 
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #search-form-container {
+        top: 80%;
     }
 }

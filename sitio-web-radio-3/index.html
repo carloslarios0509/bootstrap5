@@ -10,15 +10,16 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <div class="preload-container" id="preload">
+<!--     <div class="preload-container" id="preload">
         <img src="img/favicon.png" alt="Logo" class="custom-logo">
-    </div>
+    </div> -->
     <div class="container">
         <!-- Barra de navegación -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,11 +46,6 @@
                             <a class="nav-link" href="#">Agregar</a>
                         </li>
                     </ul>
-                    <!-- Campo de búsqueda centrado -->
-                    <form class="d-flex justify-content-center">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -74,6 +70,13 @@
             <div class="carousel-item">
                 <img src="img/rv-slider2.jpg" class="d-block w-100" alt="...">
             </div>
+        </div>
+        <div id="search-form-container">
+            <!-- Campo de búsqueda -->
+            <form id="search-form" class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar radio" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
@@ -100,7 +103,8 @@
             <div class="card">
                 <div class="card-body">
                     <h1 class="h5 card-title">PROMOCIONANDO</h1>
-                    <p class="card-texto"> ¿Eres dueño de una radio y te gustaría tener más oyentes? Regístrate y promocionate en los primeros puestos. Conviértete en tendencia en Ravi.com.</p>
+                    <p class="card-texto"> ¿Eres dueño de una radio y te gustaría tener más oyentes? Regístrate y
+                        promocionate en los primeros puestos. Conviértete en tendencia en Ravi.com.</p>
                     <a href="" class="card-link">Enlace # 2</a>
                 </div>
             </div>
@@ -108,20 +112,22 @@
             <div class="card">
                 <div class="card-body">
                     <h1 class="h5 card-title">EN TU TELÉFONO INTELIGENTE</h1>
-                    <p class="card-texto"> Escuche todas sus estaciones de radio en su teléfono móvil usando nuestro sitio web. Disfruta en cualquier lugar donde te encuentres las mejores opciones.</p>
+                    <p class="card-texto"> Escuche todas sus estaciones de radio en su teléfono móvil usando nuestro
+                        sitio web. Disfruta en cualquier lugar donde te encuentres las mejores opciones.</p>
                     <a href="" class="card-link">Enlace # 1</a>
                 </div>
-                
+
             </div>
 
             <div class="card">
                 <div class="card-body">
                     <h1 class="h5 card-title">FÁCIL DE ESCUCHAR</h1>
-                    <p class="card-texto">Todas tus emisoras de radio a un clic de distancia. Elige tu estación de radio favorita y escucha las mejores opciones en el mundo. EMPIEZA AQUÍ
+                    <p class="card-texto">Todas tus emisoras de radio a un clic de distancia. Elige tu estación de radio
+                        favorita y escucha las mejores opciones en el mundo. EMPIEZA AQUÍ
                     </p>
 
                     <a href="" class="card-link">Enlace # 1</a>
-                    
+
                 </div>
             </div>
         </div>
@@ -135,32 +141,34 @@
 
             <div class="accordion-item">
                 <h2 class="accordion-header">
-    
+
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
                         Misión y Visión
                     </button>
-    
-                </h2>
-    
-                <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#accordionExample">
-    
-                    <div class="accordion-body">
-                        Misión: Conectar a los oyentes con una amplia gama de estaciones de radio de todo el mundo, ofreciendo una experiencia auditiva única y enriquecedora.
-                        Visión: Convertirnos en el destino principal para los amantes de la radio, proporcionando acceso fácil y diverso a contenido de calidad, sin importar el género, la ubicación o el idioma.
-                    </div>
-    
-                </div> 
-    
-            </div>
-    
 
-    
-    
+                </h2>
+
+                <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+                        Misión: Conectar a los oyentes con una amplia gama de estaciones de radio de todo el mundo,
+                        ofreciendo una experiencia auditiva única y enriquecedora.
+                        Visión: Convertirnos en el destino principal para los amantes de la radio, proporcionando acceso
+                        fácil y diverso a contenido de calidad, sin importar el género, la ubicación o el idioma.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
         </div>
 
     </div>
 
-    
+
 
     <!-- Imágenes para activar cada radio -->
 
@@ -277,34 +285,38 @@
 
                                 <div class="mt-4">
 
-                                    <a href="#" target="_blank">
-                                        <button class="btn btn-primary" style="background-color: blue; color: white;">Visitar Sitio web!</button>
+                                    <a href="https://radiosegovia.net/" target="_blank">
+                                        <button class="btn btn-primary"
+                                            style="background-color: blue; color: white;">Visitar Sitio web!</button>
                                     </a>
-                                    
+
                                 </div>
 
                                 <div class="mt-4">
                                     <h4>Programas destacados</h4>
-                                <p>Programa 1: Lorem ipsum dolor sit.</p>
-                                <p>Programa 1: Lorem ipsum dolor sit.</p>
-                                <p>Programa 1: Lorem ipsum dolor sit.</p>
+                                    <p>Programa 1: Lorem ipsum dolor sit.</p>
+                                    <p>Programa 1: Lorem ipsum dolor sit.</p>
+                                    <p>Programa 1: Lorem ipsum dolor sit.</p>
 
                                 </div>
 
                                 <div>
                                     <h4>Historia</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio deleniti
-                                    nam
-                                    id magnam enim, ut quos sed mollitia nihil voluptates, pariatur ipsam velit
-                                    sequi
-                                    animi alias temporibus cum harum.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio deleniti
+                                        nam
+                                        id magnam enim, ut quos sed mollitia nihil voluptates, pariatur ipsam velit
+                                        sequi
+                                        animi alias temporibus cum harum.</p>
                                 </div>
-                                
+
                             </div>
 
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                            <div class="row w-100 text-center">
+                                <button class="btn btn-danger regular-button" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                            
                         </div>
 
                     </div>
@@ -497,9 +509,9 @@
     </div>
 
     <!-- Pie de página -->
-    <footer class="bg-dark text-light text-center py-4 mb-4">
+    <footer class="bg-dark text-light text-center py-6 mb-6">
         <div class="container">
-            <p>Derechos de Autor &copy; 2024 - Tu Nombre</p>
+            <p>Derechos de Autor &copy; 2024 - Ing Carlos Larios</p>
         </div>
     </footer>
 
@@ -521,9 +533,9 @@
                 </button>
             </div>
             <div class="py-0 px-1">
-                <div class="text-primary text-start h5" id="audioName"></div>
+                <div class="text-danger text-start h5" id="audioName"></div>
 
-                <div class="text-primary text-start h6">
+                <div class="text-danger text-start h6">
                     <p>99.3 FM - Nicaragua</p>
                 </div>
             </div>
@@ -531,69 +543,11 @@
         </div>
     </div>
 
-    <!-- js Reproductor de audio -->
-    <script>
-        var audioPlayer = document.getElementById('audioPlayer');
-        var audioPlayerContainer = document.getElementById('audioPlayerContainer');
-        var playPauseIcon = document.getElementById('playPauseIcon');
-        var audioThumbnail = document.getElementById('audioThumbnail');
-        var audioName = document.getElementById('audioName');
-
-        /* var progressBar = document.getElementById('progressBar'); */
-
-        var progress = document.getElementById('progress');
-
-        function showPlayer(audioSrc, imageSrc, name) {
-            audioPlayer.src = audioSrc;
-            audioPlayer.play();
-            audioThumbnail.src = imageSrc;
-            audioName.innerText = name;
-            playPauseIcon.classList.remove('fa-play');
-            playPauseIcon.classList.add('fa-pause');
-            audioPlayerContainer.style.display = 'block';
-
-            /* updateProgressBar(); */
-
-        }
-
-        function togglePlayPause() {
-            if (audioPlayer.paused) {
-                audioPlayer.play();
-                playPauseIcon.classList.remove('fa-play');
-                playPauseIcon.classList.add('fa-pause');
-            } else {
-                audioPlayer.pause();
-                playPauseIcon.classList.remove('fa-pause');
-                playPauseIcon.classList.add('fa-play');
-            }
-        }
-
-        audioPlayer.addEventListener('pause', function () {
-            playPauseIcon.classList.remove('fa-pause');
-            playPauseIcon.classList.add('fa-play');
-        });
+    <!-- Botón de desplazamiento al inicio -->
+    <a href="#" class="btn btn-primary btn-scroll-to-top" id="btnScrollToTop">Ir arriba</a>
 
 
-
-        /* audioPlayer.addEventListener('timeupdate', updateProgressBar); */
-
-        /*         function updateProgressBar() {
-                    var progressValue = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-                    progress.style.width = progressValue + '%';
-                } */
-
-
-    </script>
-
-    <script>
-        // Simula una carga artificialmente
-        setTimeout(function () {
-            var preload = document.getElementById('preload');
-            var mainContent = document.getElementById('main-content');
-            preload.style.display = 'none'; // Oculta el preload después de 3 segundos
-            //mainContent.style.display = 'block'; // Muestra el contenido principal
-        }, 3000); // Tiempo de espera en milisegundos (en este caso, 3000ms = 3 segundos)
-    </script>
+    <script src="js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
