@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Audio Personalizado con Bootstrap</title>
+
+    <!-- Agrega tu propio CSS personalizado si es necesario -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!--     <div class="preload-container" id="preload">
+        <img src="img/favicon.png" alt="Logo" class="custom-logo">
+    </div> -->
+    <div class="container">
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <img src="img/rv-logo.png" alt="">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Géneros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Países</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Agregar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Carrusel con efecto de slide -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/rv-slider1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/rv-slider2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/rv-slider3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/rv-slider1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/rv-slider2.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <div id="search-form-container">
+            <!-- Campo de búsqueda -->
+            <form id="search-form" class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar radio" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4 text-light">
+        <h1>Bienvenido a RaVi.com</h1>
+        <p>es un sitio web que agrupa radios que tienen una transmisión en línea.</p>
+    </div>
+
+    <div class="container py-4">
+
+        <div class="card-group text-center">
+
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="h5 card-title">PROMOCIONANDO</h1>
+                    <p class="card-texto"> ¿Eres dueño de una radio y te gustaría tener más oyentes? Regístrate y
+                        promocionate en los primeros puestos. Conviértete en tendencia en Ravi.com.</p>
+                    <a href="" class="card-link">Enlace # 2</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="h5 card-title">EN TU TELÉFONO INTELIGENTE</h1>
+                    <p class="card-texto"> Escuche todas sus estaciones de radio en su teléfono móvil usando nuestro
+                        sitio web. Disfruta en cualquier lugar donde te encuentres las mejores opciones.</p>
+                    <a href="" class="card-link">Enlace # 1</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="h5 card-title">FÁCIL DE ESCUCHAR</h1>
+                    <p class="card-texto">Todas tus emisoras de radio a un clic de distancia. Elige tu estación de radio
+                        favorita y escucha las mejores opciones en el mundo. EMPIEZA AQUÍ
+                    </p>
+
+                    <a href="" class="card-link">Enlace # 1</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido para mision y vision -->
+
+    <div class="container mt-4 ">
+
+        <div class="accordion accordion-slush" id="accordionExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        Misión y Visión
+                    </button>
+
+                </h2>
+
+                <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+                        Misión: Conectar a los oyentes con una amplia gama de estaciones de radio de todo el mundo,
+                        ofreciendo una experiencia auditiva única y enriquecedora.
+                        Visión: Convertirnos en el destino principal para los amantes de la radio, proporcionando acceso
+                        fácil y diverso a contenido de calidad, sin importar el género, la ubicación o el idioma.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Imágenes para activar cada radio -->
+
+    <div class="container mt-3">
+        <div class="row">
+
+            <h3 class="my-3 text-light">Radios Destacadas</h3>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3 ">
+                <img src="img/radiosegovia.png" class="img-fluid rounded image-button" data-bs-toggle="modal"
+                    data-bs-target="#mi-modal" alt="..."
+                    onclick="showPlayer('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this.src, 'Radio Segovia')">
+            </div>
+
+            <!-- modal para cada radio -->
+            <div class="modal fade" id="mi-modal" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-center modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+
+                            <img src="img/radiosegovia.png" class="img-fluid rounded image-button"
+                                style="width: 50px; height: 50px; margin-right: 10px;" alt="...">
+
+                            <h2 class="modal-tittle">Radio Segovia</h2>
+                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row text-center">
+
+                                <div class="col col-12 mt-1">
+                                    <h4>La poderosa del norte</h4>
+                                </div>
+
+                                <div class="col col-4 mt-1">
+                                    <h5>Frecuencia: <strong class="text-primary">97.3 FM</strong></h5>
+                                </div>
+
+                                <div class="col col-4 mt-1">
+                                    <h5>Telefono: <strong class="text-primary">273 22 058</strong></h5>
+                                </div>
+
+                                <div class="col col-4 mt-1">
+                                    <h6>País: <strong class="text-primary">Nicaragua</strong></h6>
+                                </div>
+
+                                <div class="col col-12 mt-1">
+                                    <h6>Géneros: <strong class="text-primary">Noticias, Tropical, Recuerdos,
+                                            Variado</strong></h6>
+                                </div>
+
+                                <div class="col col-12 mt-1">
+                                    <h4>Equipo de trabajo</h4>
+                                </div>
+
+                                <div class="row mx-auto p-3" style="justify-content: center">
+                                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mt-3">
+                                        <div class="card border-primary text-primary">
+                                            <img class="card-img-top"
+                                                src="https://cdn.pixabay.com/photo/2015/07/20/12/53/gehlert-852762_640.jpg"
+                                                alt="">
+                                            <div class="card-body">
+                                                <h5 class="h5 card-title">Juan Lopez</h5>
+                                                <p class="h6 card-texto">Director</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mt-3">
+                                        <div class="card border-primary text-primary">
+                                            <img class="card-img-top"
+                                                src="https://cdn.pixabay.com/photo/2024/02/12/14/56/woman-8568693_1280.jpg"
+                                                alt="">
+                                            <div class="card-body">
+                                                <h5 class="h5 card-title">Juana Rodriguez</h5>
+                                                <p class="h6 card-texto">Periodista</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mt-3">
+                                        <div class="card border-primary text-primary">
+                                            <img class="card-img-top"
+                                                src="https://cdn.pixabay.com/photo/2016/11/29/11/09/woman-1869116_1280.jpg"
+                                                alt="">
+                                            <div class="card-body">
+                                                <h1 class="h5 card-title">Luisa Sarantes</h1>
+                                                <p class="h6 card-texto">Periodista</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-12 text-center mt-1">
+                                    <h4>Redes Sociales</h4>
+
+                                    <img src="img/facebook.png" class="img-fluid rounded image-button"
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
+
+                                    <img src="img/instagram.png" class="img-fluid rounded image-button"
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
+
+                                    <img src="img/x.png" class="img-fluid rounded image-button"
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
+
+                                    <img src="img/whatsapp.png" class="img-fluid rounded image-button"
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
+
+                                    <img src="img/youtube.png" class="img-fluid rounded image-button"
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
+
+                                    <img src="img/telegram.png" class="img-fluid rounded image-button"
+                                        style="width: 30px; height: 30px; margin-right: 10px;" alt="...">
+
+                                </div>
+
+                                <div class="mt-4">
+
+                                    <a href="https://radiosegovia.net/" target="_blank">
+                                        <button class="btn btn-primary"
+                                            style="background-color: blue; color: white;">Visitar Sitio web!</button>
+                                    </a>
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <h4>Programas destacados</h4>
+                                    <p>Programa 1: Lorem ipsum dolor sit.</p>
+                                    <p>Programa 1: Lorem ipsum dolor sit.</p>
+                                    <p>Programa 1: Lorem ipsum dolor sit.</p>
+
+                                </div>
+
+                                <div>
+                                    <h4>Historia</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio deleniti
+                                        nam
+                                        id magnam enim, ut quos sed mollitia nihil voluptates, pariatur ipsam velit
+                                        sequi
+                                        animi alias temporibus cum harum.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row w-100 text-center">
+                                <button class="btn btn-danger regular-button" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/1402FM.jpg" class="img-fluid rounded image-button" data-bs-toggle="modal"
+                    data-bs-target="#mi-modal2" alt="Imagen 2"
+                    onclick="showPlayer('https://c21.radioboss.fm/stream/82', this.src, '1402FM RADIO - Costa Rica')">
+            </div>
+
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/LOGO-ESTACION RETRO HITS.jpg" class="img-fluid rounded image-button"
+                    data-bs-toggle="modal" data-bs-target="#mi-modal3" alt="Imagen 3"
+                    onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Estación Retro Hits')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/logo official stereo cristiana.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('http://stream.zeno.fm/93xw7pnn21zuv', this.src, 'Radio Stereo Cristiana')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/aguila.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://streaming01.shockmedia.com.ar:10935/stream', this.src, 'El Aguila Radio')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/logo-radio-corporacion.png" class="img-fluid rounded image-button" alt="radio-corporacion"
+                    onclick="showPlayer('http://stream.zeno.fm/gwkd66k0a7duv', this.src, 'Radio Corporación')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/radio-universo.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://s1.suenalive.com/8190/stream', this.src, 'Radio Universo')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/lagigante.jpg" class="img-fluid rounded image-button" alt="..."
+                    onclick="showPlayer('https://lagigante945fm.radio12345.com/', this.src, 'La Gigante de la Frontera')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/RADIO MIX LOGO OFICIAL 2024.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://stream.zeno.fm/ycyx8mbg65quv', this.src, 'Radio Mix FM')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/popfm.jpg" class="img-fluid rounded image-button" alt="Imagen 3"
+                    onclick="showPlayer('https://eu1.lhdserver.es:3071/stream', this.src, 'Radio Lasser Pop')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/classic_nv.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://radio.host.com.py/9432/stream', this.src, 'Radio Clasic')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/onda40.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://antares.dribbcast.com/proxy/onda40music?mp=/stream', this.src, 'Onda 40')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/clasica-hits-guatemala.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://sonicpanel.globalstream.pro/8134/stream', this.src, 'Clasica Hits')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/radiosegovia.png" class="img-fluid rounded image-button" alt="Radio Segovia"
+                    onclick="showPlayer('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this.src, 'Radio Segovia')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/1402FM.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://c21.radioboss.fm/stream/82', this.src, '1402FM RADIO - Costa Rica')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/LOGO-ESTACION RETRO HITS.jpg" class="img-fluid rounded image-button" alt="Imagen 3"
+                    onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Estación Retro Hits')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/logo official stereo cristiana.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('http://stream.zeno.fm/93xw7pnn21zuv', this.src, 'Radio Stereo Cristiana')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/aguila.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://streaming01.shockmedia.com.ar:10935/stream', this.src, 'El Aguila Radio')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/radio-universo.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://s1.suenalive.com/8190/stream', this.src, 'Radio Universo')">
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="container mt-4 text-light">
+        <div class="row">
+            <h3 class="my-3 text-light">Géneros Destacados</h3>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/radiosegovia.png" class="img-fluid rounded image-button" data-bs-toggle="modal"
+                    data-bs-target="#mi-modal" alt="..."
+                    onclick="showPlayer('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this.src, 'Radio Segovia')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/1402FM.jpg" class="img-fluid rounded image-button" data-bs-toggle="modal"
+                    data-bs-target="#mi-modal2" alt="Imagen 2"
+                    onclick="showPlayer('https://c21.radioboss.fm/stream/82', this.src, '1402FM RADIO - Costa Rica')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/LOGO-ESTACION RETRO HITS.jpg" class="img-fluid rounded image-button"
+                    data-bs-toggle="modal" data-bs-target="#mi-modal3" alt="Imagen 3"
+                    onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Estación Retro Hits')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/logo official stereo cristiana.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('http://stream.zeno.fm/93xw7pnn21zuv', this.src, 'Radio Stereo Cristiana')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/aguila.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://streaming01.shockmedia.com.ar:10935/stream', this.src, 'El Aguila Radio')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/radio-universo.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://s1.suenalive.com/8190/stream', this.src, 'Radio Universo')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/lagigante.jpg" class="img-fluid rounded image-button" alt="..."
+                    onclick="showPlayer('https://lagigante945fm.radio12345.com/', this.src, 'La Gigante de la Frontera')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/RADIO MIX LOGO OFICIAL 2024.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://stream.zeno.fm/ycyx8mbg65quv', this.src, 'Radio Mix FM')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/popfm.jpg" class="img-fluid rounded image-button" alt="Imagen 3"
+                    onclick="showPlayer('https://eu1.lhdserver.es:3071/stream', this.src, 'Radio Lasser Pop')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/classic_nv.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://radio.host.com.py/9432/stream', this.src, 'Radio Clasic')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/onda40.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://antares.dribbcast.com/proxy/onda40music?mp=/stream', this.src, 'Onda 40')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/clasica-hits-guatemala.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://sonicpanel.globalstream.pro/8134/stream', this.src, 'Clasica Hits')">
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/radiosegovia.png" class="img-fluid rounded image-button" alt="Radio Segovia"
+                    onclick="showPlayer('https://stream-155.zeno.fm/dxkpx08drchvv?zs=FVP876-oRPe98yFo8u50Yg&rj-ttl=5&rj-tok=AAABfn8DV_4AVq_g5wUvdVvtMQ', this.src, 'Radio Segovia')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/1402FM.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://c21.radioboss.fm/stream/82', this.src, '1402FM RADIO - Costa Rica')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/LOGO-ESTACION RETRO HITS.jpg" class="img-fluid rounded image-button" alt="Imagen 3"
+                    onclick="showPlayer('http://s2.suenalive.com/8362/stream', this.src, 'Estación Retro Hits')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/logo official stereo cristiana.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('http://stream.zeno.fm/93xw7pnn21zuv', this.src, 'Radio Stereo Cristiana')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/aguila.png" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://streaming01.shockmedia.com.ar:10935/stream', this.src, 'El Aguila Radio')">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 mb-3">
+                <img src="img/radio-universo.jpg" class="img-fluid rounded image-button" alt="Imagen 2"
+                    onclick="showPlayer('https://s1.suenalive.com/8190/stream', this.src, 'Radio Universo')">
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container mt-4 text-light">
+        <h3>Paises</h3>
+        <p></p>
+
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-light text-center py-6 mb-6">
+        <div class="container">
+            <p>Derechos de Autor &copy; 2024 - Ing Carlos Larios</p>
+        </div>
+    </footer>
+
+    <!-- Reproductor de audio personalizado -->
+    <div id="audioPlayerContainer" class="bottom-0 start-50 translate-middle-x p-2"
+        style="background-color: #a6acdd; display: none;">
+
+        <audio id="audioPlayer" style="display: none;"></audio>
+
+        <div class="d-flex align-items-left" style="height: 4rem;">
+            <div class="py-2 px-1">
+                <img id="audioThumbnail" src="" class="img-fluid rounded"
+                    style="width: 50px; height: 50px; margin-right: 10px;">
+            </div>
+            <div class="py-2 px-1">
+                <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;"
+                    onclick="togglePlayPause()">
+                    <i id="playPauseIcon" class="fas fa-play"></i>
+                </button>
+            </div>
+            <div class="py-0 px-1">
+                <div class="text-danger text-start h5" id="audioName"></div>
+
+                <div class="text-danger text-start h6">
+                    <p>99.3 FM - Nicaragua</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Botón de desplazamiento al inicio -->
+    <a href="#" class="btn btn-primary btn-scroll-to-top" id="btnScrollToTop">Ir arriba</a>
+
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
