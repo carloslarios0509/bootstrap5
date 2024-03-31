@@ -91,3 +91,9 @@ body {
         top: 80%;
     }
 }
+
+/* Efecto hover en imagenes */
+.img-fluid:hover{
+    transform: scale(1.08) !important;
+    transition: .08s all !important;
+}
