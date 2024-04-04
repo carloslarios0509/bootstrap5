@@ -7,6 +7,10 @@ body {
     position: relative; /* Necesario para que el botón flotante funcione correctamente */
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .btn-scroll-to-top {
     position: fixed;
     bottom: 90px;
