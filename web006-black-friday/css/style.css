@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+/* Main Styling */
+html,
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	font-family: 'Squada One', sans-serif;
+}
+
+/* Bootstrap */
+.pt-6 {
+	padding-top: 80px;
+}
+
+.text-primary {
+	color: #c4bfb1 !important;
+}
+
+.display-1 {
+	font-size: 14rem;
+}
+.display-2 {
+	font-family: 'Allura', cursive;
+	font-size: 12rem;
+}
+
+/* Header */
+.py-6 {
+	padding: 70px 0;
+}
+
+.logo {
+	display: block;
+	margin: 0 auto;
+}
+
+#header h1 {
+	line-height: 0.8em;
+}
+
+#header p {
+	margin-top: -120px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.display-1,
+	.display-2 {
+		font-size: 10rem;
+	}
+
+	#offers img {
+		padding: 0 20px !important;
+	}
+
+	#offers h4,
+	#offers p {
+		text-align: center;
+	}
+
+	#offers a {
+		margin: 0 auto;
+	}
+}
