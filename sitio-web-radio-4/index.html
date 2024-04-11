@@ -97,7 +97,7 @@
         </div>
     </div>
 
-     <!-- Showcase -->
+    <!-- Showcase -->
     <div class="showcase py-5">
         <div class="container">
             <div class="row">
@@ -105,7 +105,7 @@
                     <div class="text-container text-white">
                         <h1 class="display-2 text-capitalize fw-semibold">
                             Bienvenido a RaVir.com, <br>
-                            <span class="text-primary">Descubre, Escucha, Disfruta</span>
+                            <span class="text-danger">Descubre, Escucha, Disfruta</span>
                         </h1>
                         <p class="lead py-3">Un sitio web que agrupa radios con una transmisión en línea.</p>
                     </div>
@@ -526,32 +526,47 @@
 
 
     <!-- Reproductor de audio personalizado -->
-    <div id="audioPlayerContainer" class="bottom-0 start-50 translate-middle-x p-2"
-        style="background-color: #a6acdd; display: none;">
+    <div class="container">
+        <div class="row">
+            <div id="audioPlayerContainer" class="bottom-0 start-50 translate-middle-x p-1"
+                style="background-color: #f6e4e4; display: none;">
 
-        <audio id="audioPlayer" style="display: none;"></audio>
+                <ul class="nav d-flex justify-content-center">
 
-        <div class="d-flex align-items-left" style="height: 4rem;">
-            <div class="py-2 px-1">
-                <img id="audioThumbnail" src="" class="img-fluid rounded"
-                    style="width: 50px; height: 50px; margin-right: 10px;">
-            </div>
-            <div class="py-2 px-1">
-                <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;"
-                    onclick="togglePlayPause()">
-                    <i id="playPauseIcon" class="fas fa-play"></i>
-                </button>
-            </div>
-            <div class="py-0 px-1">
-                <div class="text-danger text-start h5" id="audioName"></div>
+                    <li class="nav-link">
+                        <audio id="audioPlayer" style="display: none;"></audio>
+                    </li>
 
-                <div class="text-danger text-start h6">
-                    <p>99.3 FM - Nicaragua</p>
-                </div>
+                    <li class="nav-link p-1">                        
+                            <img id="audioThumbnail" src="" class="img-fluid rounded"
+                                style="width: 50px; height: 50px; margin-right: 10px;">                        
+                    </li>
+
+                    <li class="nav-link p-1">
+                        <button class="btn btn-primary rounded-circle"
+                            style="width: 50px; height: 50px; margin-right: 10px;" onclick="togglePlayPause()">
+                            <i id="playPauseIcon" class="fas fa-play"></i>
+                        </button>
+                    </li>
+
+                    <li class="nav-link p-1">
+                        <div class="text-danger" id="audioName"></div>
+                    </li>
+
+                    <li class="nav-link p-1">
+                        <div class="text-danger">
+                            <p>99.3 FM - Nicaragua</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
         </div>
     </div>
+
+
+
+
 
 
 
@@ -560,36 +575,36 @@
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item">
-                    <a href="index.html" target="_blank" class="nav-link px-2 text-body-secondary">Inicio</a>
+                    <a href="index.html" target="_blank" class="nav-link px-2 text-secondary">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="nosotros.html" target="_blank" class="nav-link px-2 text-body-secondary">Nosotros</a>
+                    <a href="nosotros.html" target="_blank" class="nav-link px-2 text-secondary">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a href="faqs.html" target="_blank" class="nav-link px-2 text-body-secondary">Preguntas
+                    <a href="faqs.html" target="_blank" class="nav-link px-2 text-secondary">Preguntas
                         Frecuentes</a>
                 </li>
                 <li class="nav-item">
-                    <a href="politicas.html" target="_blank" class="nav-link px-2 text-body-secondary">Politicas de
+                    <a href="politicas.html" target="_blank" class="nav-link px-2 text-secondary">Politicas de
                         Seguridad</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="terminos.html" target="_blank" class="nav-link px-2 text-body-secondary">Términos de
+                    <a href="terminos.html" target="_blank" class="nav-link px-2 text-secondary">Términos de
                         servicio</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="mapa.html" target="_blank" class="nav-link px-2 text-body-secondary">Mapa del Sitio</a>
+                    <a href="mapa.html" target="_blank" class="nav-link px-2 text-secondary">Mapa del Sitio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="noaudio.html" target="_blank" class="nav-link px-2 text-body-secondary">Sin Audio</a>
+                    <a href="noaudio.html" target="_blank" class="nav-link px-2 text-secondary">Sin Audio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contacto.html" target="_blank" class="nav-link px-2 text-body-secondary">Contacto</a>
+                    <a href="contacto.html" target="_blank" class="nav-link px-2 text-secondary">Contacto</a>
                 </li>
             </ul>
-            <p class="text-center text-body-secondary">@ 2024 - RaVir.com</p>
+            <p class="text-center text-secondary">@ 2024 - RaVir.com</p>
         </footer>
     </div>
 

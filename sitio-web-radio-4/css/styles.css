@@ -13,7 +13,7 @@ h2 {
 }
 
 body {
-    background-color: #212529 !important;
+    background-color: #333436 !important;
     /* Color oscuro de fondo */
     margin: 0;
     padding: 0;
@@ -33,7 +33,6 @@ a {
     z-index: 9999; /* Asegura que el botón esté sobre otros elementos */
 }
 
-
 /* Estilos personalizados para el reproductor de audio */
 #audioPlayerContainer {
     position: fixed;
@@ -41,8 +40,7 @@ a {
     left: 0;
     width: 100%;   
     padding: 10px;    
-    display: flex;
-    
+    display: flex;    
 }
 
 .audio-player img {
