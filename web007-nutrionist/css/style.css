@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Main Styling */
+html,
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.75rem;
+}
+h4 {
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1.25rem;
+}
+h6 {
+	font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	font-size: 1rem;
+	margin: 10px 0;
+	line-height: 1.7em;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Utility Classes */
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.display-1 {
+	font-size: 3rem;
+}
+
+.display-2 {
+	font-size: 2.2rem;
+}
+
+.display-1,
+.display-2 {
+	font-weight: 500;
+}
+
+.list {
+	padding-left: 30px;
+	line-height: 1.7em;
+}
+
+/* Padding */
+.pt-1 {
+	padding-top: 200px;
+}
+.pt-2 {
+	padding-top: 80px;
+}
+.pt-3 {
+	padding-top: 40px;
+}
+.pt-4 {
+	padding-top: 20px;
+}
+.pt-5 {
+	padding-top: 10px;
+}
+
+.pb-1 {
+	padding-bottom: 200px;
+}
+.pb-2 {
+	padding-bottom: 80px;
+}
+.pb-3 {
+	padding-bottom: 40px;
+}
+.pb-4 {
+	padding-bottom: 20px;
+}
+.pb-5 {
+	padding-bottom: 10px;
+}
+
+.pr-1 {
+	padding-right: 30px;
+}
+
+.pr-2 {
+	padding-right: 10px;
+}
+
+.m-1 {
+	margin: 20px;
+}
+
+.mt-1 {
+	margin-top: 20px;
+}
+
+.mr-1 {
+	margin-right: 20px;
+}
+
+/* Width */
+.w-30 {
+	width: 30%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-60 {
+	width: 60%;
+}
+
+.w-30,
+.w-60 {
+	margin: 0 auto;
+}
+
+/* Flex */
+.flex {
+	display: flex;
+}
+
+.flex-box-1 {
+	flex: 1;
+}
+
+.flex-box-2 {
+	flex: 2;
+}
+
+.flex-stack {
+	display: flex;
+}
+
+/* Backgrounds */
+.bk-showcase {
+	background: url('../image/showcase.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.bk-gray {
+	background: #f9f9f9;
+}
+.bk-whatsapp {
+	background: #65d072;
+}
+.bk-orange {
+	background: #ea9940;
+}
+.bk-orange-light {
+	background: #eca353;
+}
+
+.bk-green {
+	background: #a0c760;
+}
+
+.bk-shadow {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Text */
+.txt-large {
+	font-size: 20px;
+}
+.txt-small {
+	font-size: 12px;
+}
+.txt-quote {
+	font-style: italic;
+}
+.txt-center {
+	text-align: center;
+}
+.txt-right {
+	text-align: right;
+}
+.txt-uppercase {
+	text-transform: uppercase;
+}
+.txt-orange {
+	color: #ea9940;
+}
+.txt-white {
+	color: #fff;
+}
+.txt-green {
+	color: #a0c760;
+}
+.txt-brown {
+	color: #8c8073;
+}
+
+/* Button */
+.btn {
+	display: inline-block;
+	font-size: 15px;
+	padding: 12px 25px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	border-radius: 4px;
+	border: none;
+}
+
+.btn-orange {
+	background: #ea9940;
+	color: #fff;
+}
+.btn-whatsapp {
+	background: #fff;
+	color: #65d072;
+}
+.btn-cta {
+	padding: 18px 12px;
+}
+.btn-green,
+.btn-cta {
+	background: #a0c760;
+	color: #fff !important;
+}
+
+/* Form */
+form label {
+	display: inline-block;
+	margin-bottom: 6px;
+}
+
+form .form-group {
+	margin-bottom: 16px;
+}
+
+form .form-control {
+	display: block;
+	width: 100%;
+	padding: 7px 12px;
+	font-size: 1rem;
+	line-height: 1.5;
+	background: #eaeaea;
+	border: 1px solid #ced4da;
+	border-radius: 4px;
+}
+
+/* Navbar */
+.navbar {
+	height: 10vh;
+}
+
+.navbar .logo img {
+	height: 40px;
+}
+
+.navbar a {
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.navbar .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.navbar ul {
+	display: flex;
+}
+
+.navbar ul li {
+	list-style: none;
+	padding: 20px 10px;
+}
+
+/* Showdcase */
+#showcase {
+	height: 90vh;
+}
+
+/* About  */
+#home-about img {
+	padding-right: 80px;
+}
+
+/* Features */
+#features img {
+	height: 50px;
+}
+
+/* Prices */
+#prices img {
+	height: 200px;
+	border-radius: 50%;
+}
+
+#prices ul {
+	list-style: none;
+	padding-left: 120px;
+	text-align: left;
+	line-height: 2.5em;
+}
+
+#prices .flex-stack {
+	padding-right: 200px;
+	padding-left: 200px;
+}
+
+#prices span:nth-child(1) {
+	padding-bottom: 10px;
+}
+
+/* FAQ */
+#faq img {
+	height: 50px;
+}
+
+/* Form */
+#form button {
+	width: 100%;
+}
+
+/* Contact */
+#contact img {
+	height: 90px;
+}
+
+#contact h6 {
+	font-weight: 400;
+}
+
+/* Footer */
+#mainfooter ul li {
+	list-style: none;
+	line-height: 2em;
+}
+
+#mainfooter a {
+	color: #fff;
+}
+
+.mainfooter-menu img {
+	height: 30px;
+}
+
+.flex-stack img {
+	padding-right: 10px;
+}
