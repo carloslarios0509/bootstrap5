@@ -526,40 +526,44 @@
 
 
     <!-- Reproductor de audio personalizado -->
-    <div class="container">
+    <div class="player container">
         <div class="row">
-            <div id="audioPlayerContainer" class="bottom-0 start-50 translate-middle-x p-1"
-                style="background-color: #f6e4e4; display: none;">
+            <div class="col-md-4">
 
-                <ul class="nav d-flex justify-content-center">
-
-                    <li class="nav-link">
-                        <audio id="audioPlayer" style="display: none;"></audio>
-                    </li>
-
-                    <li class="nav-link p-1">                        
-                            <img id="audioThumbnail" src="" class="img-fluid rounded"
-                                style="width: 50px; height: 50px; margin-right: 10px;">                        
-                    </li>
-
-                    <li class="nav-link p-1">
-                        <button class="btn btn-primary rounded-circle"
-                            style="width: 50px; height: 50px; margin-right: 10px;" onclick="togglePlayPause()">
-                            <i id="playPauseIcon" class="fas fa-play"></i>
-                        </button>
-                    </li>
-
-                    <li class="nav-link p-1">
-                        <div class="text-danger" id="audioName"></div>
-                    </li>
-
-                    <li class="nav-link p-1">
-                        <div class="text-danger">
-                            <p>99.3 FM - Nicaragua</p>
-                        </div>
-                    </li>
-                </ul>
             </div>
+            <div class="col-md-4">
+                <div id="audioPlayerContainer" class="bottom-0 start-50 translate-middle-x"
+                    style="background-color: #f6e4e4; display: none;">
+
+                    <ul class="nav justify-content-center p-0">
+
+                        <li class="nav-link p-0">
+                            <audio id="audioPlayer" style="display: none;"></audio>
+                        </li>
+
+                        <li class="nav-link p-0">
+                            <img id="audioThumbnail" src="" class="img-fluid rounded"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                        </li>
+
+                        <li class="nav-link p-0">
+                            <button class="btn btn-primary rounded-circle"
+                                style="width: 50px; height: 50px; margin-right: 10px;" onclick="togglePlayPause()">
+                                <i id="playPauseIcon" class="fas fa-play"></i>
+                            </button>
+                        </li>
+
+                        <li class="nav-link d-flex flex-column justify-content-center p-0">
+                            <div class="h5 fw-bold" id="audioName"></div>
+                            <p>99.3 FM - Nicaragua</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+
 
         </div>
     </div>
