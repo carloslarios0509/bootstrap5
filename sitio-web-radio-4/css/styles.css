@@ -108,6 +108,14 @@ a {
     }
 }
 
+.text-orange {
+	color: #ff6d2d !important;
+}
+
+.text-secondary {
+    color: #fff !important;
+}
+
 /* Efecto hover en imagenes */
 .img-fluid:hover{
     transform: scale(1.08) !important;
@@ -124,11 +132,4 @@ a {
 	color: #ff6d2d !important;
 }
 
-.text-primary {
-	color: #ff6d2d !important;
-}
-
-.text-secondary {
-    color: #fff !important;
-}
 
